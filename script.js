@@ -1,5 +1,6 @@
-// import { loadContent } from "./src/loader.js";
-
+import { loadContent } from "./src/loader.js";
+import { getNotes, getNote } from "./src/services/notes-service.js";
+import STORE from "./src/store.js";
 // loadContent();
 const base_uri = "https://keepable-api.herokuapp.com";
 
@@ -26,5 +27,17 @@ response
 
     const token = result.token;
     console.log(token);
+    ////obtener todas las notas GET mandando token
+
+    // getNotes(token).then((notas) => {
+    //   STORE.notes = notas;
+    //   loadContent();
+    // });
+
+    //obtener solo una nota nuetsra metas GET mandando token en la misma consola
+    // getNote(token, 647).then((note) => console.log(note));
+    getNote(token, 647).then(console.log);
   })
   .catch((error) => console.log(error.message)); //Esto permite que cuando haya error vengan a este línne a de código garcias al if de la línea 25
+// Obtener con GET las listas
+//Renderizar las listas con Store.notes
