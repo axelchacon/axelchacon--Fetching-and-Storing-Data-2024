@@ -228,30 +228,30 @@
 
 ///////////////////////////////ejemplo 13 Mira el ejemplo 7///////////////////////////////////
 
-async function ejemploAsincronico() {
-  // Operación asincrónica simulada que devuelve una promesa
-  try {
-    // Llama a la función asíncrona y espera a que se resuelva la promesa
-    const promesa = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        // Resuelve la promesa después de 1 segundo
-        resolve("¡Operación asincrónica completada!");
-      }, 1000);
-    });
+// async function ejemploAsincronico() {
+//   // Operación asincrónica simulada que devuelve una promesa
+//   try {
+//     // Llama a la función asíncrona y espera a que se resuelva la promesa
+//     const promesa = new Promise((resolve, reject) => {
+//       setTimeout(() => {
+//         // Resuelve la promesa después de 1 segundo
+//         resolve("¡Operación asincrónica completada!");
+//       }, 1000);
+//     });
 
-    // Espera a que la promesa se resuelva antes de continuar
-    const resultado = await promesa;
-    console.log("Esperando 0...");
-    console.log(resultado);
-    console.log("Esperando 1...");
-  } catch (error) {
-    console.error("Error:", error);
-  }
-}
-console.log("Esperando 2...");
-// Llama a la función que utiliza la función asíncrona
-ejemploAsincronico();
-console.log("Esperando 3...");
+//     // Espera a que la promesa se resuelva antes de continuar
+//     const resultado = await promesa;
+//     console.log("Esperando 0...");
+//     console.log(resultado);
+//     console.log("Esperando 1...");
+//   } catch (error) {
+//     console.error("Error:", error);
+//   }
+// }
+// console.log("Esperando 2...");
+// // Llama a la función que utiliza la función asíncrona
+// ejemploAsincronico();
+// console.log("Esperando 3...");
 //// Resultado en terminal:
 //    Esperando 2... (aparecen primero)
 //    Esperando 3... (aparecen primero)
@@ -284,3 +284,14 @@ console.log("Esperando 3...");
 
 // // Llama a la función que utiliza la promesa
 // ejemploAsincronico();
+
+//////////////////////////////ejemplo 15 :Operaciones Asíncronas con Condicionales, Mira el ejemplo 7///////////////////////////////////
+
+const persona = {
+  nombre: "Juan",
+  edad: 30,
+  ciudad: "Ejemplo City",
+};
+
+const jsonPersona = JSON.stringify(persona);
+console.log(jsonPersona);
